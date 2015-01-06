@@ -1,4 +1,4 @@
-datastudio-examples
+datalab-examples
 ===================
 
-Example DataStudio iPythonNotebooks for genomics use cases.
+Example DataLab iPythonNotebooks for genomics use cases.
