@@ -16,10 +16,18 @@ def get_notebook_filepaths(root_filepath):
         notebooks.append(os.path.join(root, filename))
   return notebooks
 
+
 def convert_notebook_to_markdown(notebook_filepath, output_dirpath):
   with open(notebook_filepath) as f:
       nb = nbformat.reads_json(f.read())
   source, meta = exporter.from_notebook_node(nb)
+
+  # TODO(bryantd): the output files for a notebook are not being generated at the moment
+  # Issue is that the "ExtractOutputPreprocessor" needs to be run over the notebook and isn't
+  # at the moment in this function. Maybe it's simpler to just shell out to nbconvert here
+  # with the correct set of args at the moment, or use the NbConvertApp top-level ipy app object
+  # to do the same without invoking the shell
+  # See also: http://stackoverflow.com/questions/22037910
 
   # The GitHub Markdown rendering chokes if a newline doesn't exist between divs and tables
   # which causes the remainder of the Markdown document after such an instance to improperly render
