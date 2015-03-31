@@ -32,17 +32,6 @@ Genomics API in this notebook.
 
     !pip install --upgrade google-api-python-client
 
-    Requirement already up-to-date: google-api-python-client in /usr/local/lib/python2.7/dist-packages
-    Requirement already up-to-date: httplib2>=0.8 in /usr/lib/python2.7/dist-packages (from google-api-python-client)
-    Requirement already up-to-date: oauth2client>=1.4.6 in /usr/local/lib/python2.7/dist-packages (from google-api-python-client)
-    Requirement already up-to-date: six>=1.6.1 in /usr/local/lib/python2.7/dist-packages (from google-api-python-client)
-    Requirement already up-to-date: uritemplate>=0.6 in /usr/local/lib/python2.7/dist-packages (from google-api-python-client)
-    Requirement already up-to-date: pyasn1==0.1.7 in /usr/local/lib/python2.7/dist-packages (from oauth2client>=1.4.6->google-api-python-client)
-    Requirement already up-to-date: pyasn1-modules==0.0.5 in /usr/local/lib/python2.7/dist-packages (from oauth2client>=1.4.6->google-api-python-client)
-    Requirement already up-to-date: rsa==3.1.4 in /usr/local/lib/python2.7/dist-packages (from oauth2client>=1.4.6->google-api-python-client)
-    Requirement already up-to-date: simplejson>=2.5.0 in /usr/local/lib/python2.7/dist-packages (from uritemplate>=0.6->google-api-python-client)
-    Cleaning up...
-
 
 ### Get an API key
 
@@ -51,19 +40,13 @@ to [get an API key](https://developers.google.com/api-client-
 library/python/start/get_started#auth), which will authorize our requests.
 
 
-    # FIXME: remove this API key line
-    # Note: this API key is already restricted to this single VM's IP address,
-    # so not particularly dangerous to leak.
-    import os
-    os.environ['DNA_API_KEY'] = ''
-    
     # TODO(bryantd): Come up with a better scheme for users to add their own
     # API key that avoids saving it in the notebook directly. It would be nice
     # to have the VM request an API key on startup actually and auto-set this
     # environment variable so that users never actually see it.
-    
+
     API_KEY = os.environ.get('DNA_API_KEY', None)
-    
+
     # Make sure that an API key was defined
     # todo: put instructions here for getting an api key
     if API_KEY is None:
@@ -168,4 +151,4 @@ And access fields within the response data as expected:
 
 
 
-    
+
