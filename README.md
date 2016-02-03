@@ -9,8 +9,4 @@ You can read them here on github:
 * [Genome-wide association study](datalab/genomics/Genome-wide%20association%20study%20(GWAS).ipynb)
 * [Getting started with the Google Genomics API](datalab/genomics/Getting%20started%20with%20the%20Genomics%20API.ipynb)
 
-To run them yourself:
- 1. Launch your own Cloud Datalab instance: https://cloud.google.com/datalab/
- 2. Work through the introductory notebooks first that are pre-installed on Cloud Datalab.
- 3. git clone this repository
- 4. Import the genomics notebooks into your Cloud Datalab instance by navigating to the notebook list page and uploading them one at a time.
+To run them yourself and discover other sample notebooks, see the [Google Genomics Cookbook](http://googlegenomics.readthedocs.org/en/latest/use_cases/run_familiar_tools/datalab.html).
